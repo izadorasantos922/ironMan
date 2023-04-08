@@ -1,0 +1,312 @@
+:root{
+    --primary-text-color: #fff;
+    --primary-bg-color: #000;
+    --color-red: #f32d2d;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+header{
+  padding: 1rem;
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg-color);
+}
+
+input[type=submit],
+.sing-up,
+.learn-more,
+nav a{
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.brand {
+    height: 60px;
+    width: 10rem;
+    margin-left: 3rem;
+    background: url(/img/marvel-brand.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.learn-more{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn{
+    background: transparent;
+    color: var(--primary-text-color);
+    border: 0;
+    padding: 10px;
+}
+.btn:hover,
+.sing-up:hover,
+nav a:hover,
+.search i:hover{
+    color: var(--color-red);
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+header nav{
+    display: flex;
+    justify-content: center;
+}
+
+nav a{
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    color: var(--primary-text-color);
+}
+.search i{
+    border: 2px solid;
+    padding: 5px;
+    color: var(--primary-text-color);
+ }
+
+/* menu mobile */
+#menu{
+    font-size: 1.5rem;
+    display: none;
+}
+.nav-menu{
+    padding: 30px;
+    display: block;
+    position: fixed;
+   right: 100%;
+    width: 50%;
+    height:100%;
+    transition: 1s ;
+    margin-top: 32rem;
+    background-color: var(--primary-bg-color);
+    z-index: 6;
+}
+.menu-active{
+   right: 38%;
+}
+
+.nav-menu #close-menu {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 7%;
+    top:3.5%;
+}
+ul {
+    margin-top: 40px;
+    list-style: none;
+}
+
+
+.nav-menu a{
+    display: block;
+    color: var(--primary-text-color);
+}
+/* finish menu mobile */
+
+.image-container img{
+    height: 70vh;
+}
+
+.presentation{
+    display: flex;
+}
+
+.short-description{
+    padding: 1rem 2rem;
+    text-align:start;
+}
+
+.short-description h1{
+    margin-left: 5px;
+    color: var(--color-red);
+}
+
+.short-description h1, h2{
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 900;
+}
+.movies img{
+    width: 100px;
+    height: 90px;
+}
+
+.movie1,
+.movie2,
+.movie3{
+    position: absolute;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px var(--primary-bg-color);
+}
+
+.movie1{
+    top: 60%;
+    right: 23%;
+    z-index: 3;
+}
+
+.movie2{
+    top: 60%;
+    right: 14.5%;
+    z-index: 2;
+}
+.movie3{
+    top: 60%;
+    right: 6%;
+    z-index: 1;
+}
+
+.description{
+    background-color: var(--primary-bg-color);
+    font-size: 18px;
+    padding: 2rem;
+}
+.description p{
+    color: var(--color-red);
+    margin-top: 10px;
+}
+.description span{
+    color: var(--primary-text-color);
+    font-weight: 900;
+}
+footer{
+    height: 100px;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.links{
+    margin-left: 16px;
+}
+.links i{
+    font-size: 30px;
+    color: var(--color-red);
+    margin-left: 20px;
+}
+
+.links i:hover{
+    color: var(--primary-text-color);
+}
+
+@media(max-width: 425px){
+
+    .btn,
+    .sing-up,
+    .nav,
+    .sub,
+    .btn{
+    display: none;
+}
+.image-container img{
+    width: 100%;
+    height: 20rem;
+}
+#menu,
+#close-menu{
+    display: block;
+}
+
+.presentation{
+    display: flex;
+    flex-direction: column;
+}
+.image-container img{
+    width: 100%;
+}
+.short-description{
+   height: 60vh;
+}
+.movies img{
+    height: 100px;
+}
+.movie1{
+    top: 120%;
+    right: 70%;
+    z-index: 3;
+}
+
+.movie2{
+    top: 120%;
+    right: 43%;
+    z-index: 2;
+}
+.movie3{
+    top: 120%;
+    right: 17%;
+    z-index: 1;
+}
+.brand{
+    margin-left: 0;
+}
+
+}
+
+@media(max-width: 375px){
+    .nav-menu #close-menu {
+        left: 10%;
+    }
+    .image-container img{
+        width: 100%;
+        height: 15rem;
+    }
+    .movie1{
+        top: 105%;
+        right: 70%;
+        z-index: 3;
+    }
+    
+    .movie2{
+        top: 105%;
+        right: 40%;
+        z-index: 2;
+    }
+    .movie3{
+        top: 105%;
+        right: 9%;
+        z-index: 1;
+    }
+}
+
+@media(max-width: 320px){
+    .image-container img{
+        width: 100%;
+        height: 10rem;
+    }
+    .nav-menu #close-menu {
+        left: 15%;
+    }
+
+    .movie1{
+        top: 92%;
+        right: 60%;
+        z-index: 3;
+    }
+    
+    .movie2{
+        top: 92%;
+        right: 35%;
+        z-index: 2;
+    }
+    .movie3{
+        top: 92%;
+        right: 10%;
+        z-index: 1;
+    }
+}
